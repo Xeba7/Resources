@@ -1,0 +1,11 @@
+{
+  "editor.defaultFoldingRangeProvider": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.linkedEditing": true,
+  "html.format.enable": true,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "prettier.singleAttributePerLine": false,
+  "html.format.wrapAttributes": "force",
+  "editor.formatOnSave": true
+}

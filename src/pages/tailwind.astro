@@ -1,0 +1,217 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Arrow from "../components/Arrow.astro";
+
+const Links = [
+  {
+    title: "shadcn",
+    url: "https://ui.shadcn.com/",
+    description:
+      "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source",
+  },
+  {
+    title: "HTMLREV",
+    url: "https://htmlrev.com/",
+    description: "Free HTML, Bootstrap, Tailwind Templates on HTMLrev",
+  },
+  {
+    title: "uicolors",
+    url: "https://uicolors.app/create",
+    description: "Tailwind CSS Color Generator | UI Colors",
+  },
+  {
+    title: "tw-elements",
+    url: "https://tw-elements.com/",
+    description: "TW Elements - 500+ free Tailwind CSS components",
+  },
+  {
+    title: "tremor",
+    url: "https://www.tremor.so/",
+    description: "Tremor, The React library to build dashboards fast",
+  },
+  {
+    title: "KonstaUI",
+    url: "https://konstaui.com/",
+    description: "Konsta UI - Mobile UI components built with Tailwind CSS",
+  },
+  {
+    title: "NextUI",
+    url: "https://nextui.org/",
+    description: "Beautiful, fast and modern React UI Library",
+  },
+  {
+    title: "tailwindcss-animated",
+    url: "https://t.co/Jxsg1H4AFK",
+    description: "Extended animation utilities for Tailwind CSS",
+  },
+  {
+    title: "rewind-ui",
+    url: "https://t.co/rBuHMfw3SX",
+    description: "Next.js,React,Tailwind CSS,UI,React component library",
+  },
+  {
+    title: "Flowbite",
+    url: "https://flowbite.com/",
+    description:
+      "Build websites even faster with components on top of Tailwind CSS",
+  },
+  {
+    title: "Preline",
+    url: "https://preline.co/index.html",
+    description:
+      "Open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework",
+  },
+  {
+    title: "daisyUI",
+    url: "https://daisyui.com/",
+    description:
+      "Best Tailwind Components Library - Free UI components for Tailwind CSS",
+  },
+  {
+    title: "HyperUI",
+    url: "https://www.hyperui.dev/",
+    description: "Free Open Source Tailwind CSS Components ",
+  },
+  {
+    title: "ui.ibelick",
+    url: "https://ui.ibelick.com/",
+    description:
+      "Collection of dark mode-first components and effects. Crafted with React and Tailwind CSS",
+  },
+  {
+    title: "Tailus",
+    url: "https://tailus.io/blocks",
+    description:
+      "50+ redesigned and easy to customize blocks built with Tailwind css supporting light and dark mode to help you to build a modern UI faster",
+  },
+
+  {
+    title: "Tailblocks",
+    url: "https://tailblocks.cc/",
+    description: "Ready-to-use Tailwind CSS blocks",
+  },
+  {
+    title: "FloatUI",
+    url: "https://www.floatui.com/",
+    description: "Free open source Tailwind UI components & Templates",
+  },
+  {
+    title: "Keep React",
+    url: "https://react.keepdesign.io/",
+    description: "Supercharge Your Web Development",
+  },
+  {
+    title: "tailwindcss-animated",
+    url: "https://www.tailwindcss-animated.com/",
+    description: "Tailwind CSS Animated",
+  },
+  {
+    title: "landingfolio",
+    url: "https://www.landingfolio.com/",
+    description:
+      "The Best Landing Page Design Inspiration, Templates and More | Landingfolio",
+  },
+  {
+    title: "linarui",
+    url: "https://lunarui.dev/",
+    description:
+      "Fabulous Tailwind CSS components for landing pages | Lunar UI",
+  },
+  {
+    title: "animation.ibelick",
+    url: "https://animation.ibelick.com/",
+    description: " Tailwind CSS animation gallery",
+  },
+  {
+    title: "tailwind gradient generator",
+    url: "https://tailwind-gradient-generator.vercel.app/",
+    description:
+      "Make your own Tailwind CSS gradient with this easy to use tool",
+  },
+  {
+    title: "AceternityUI",
+    url: "https://ui.aceternity.com/",
+    description:
+      "Beautiful Tailwind CSS and Framer Motion Components, built with Next.js and TypeScript",
+  },
+  {
+    title: "Julienthibeaut",
+    url: "https://www.julienthibeaut.xyz/blog/create-grid-and-dot-backgrounds-with-css-tailwind-css",
+    description: "Crafting grid and dot backgrounds with CSS and Tailwind CSS",
+  },
+
+  {
+    title: "uiverse",
+    url: "https://uiverse.io/",
+    description: "Explore 3000+ Free UI Elements: CSS & Tailwind",
+  },
+  {
+    title: "material-tailwind",
+    url: "https://www.material-tailwind.com/",
+    description:
+      "Material Tailwind - Easy-to-use Tailwind CSS components library with React and Material Design",
+  },
+  {
+    title: "HeadlessUI",
+    url: "https://headlessui.com/",
+    description: "Unstyled, fully accessible UI components",
+  },
+  {
+    title: "tailgrinds",
+    url: "https://tailgrids.com/",
+    description: "Tailwind UI Component Library, Kit and Templates | TailGrids",
+  },
+  {
+    title: "MerakiUI",
+    url: "https://merakiui.com/components",
+    description: "Components | Free Tailwind CSS Components",
+  },
+  {
+    title: "TailwindUI",
+    url: "https://tailwindui.com/",
+    description:
+      "Beautifully designed, expertly crafted components and templates",
+  },
+  {
+    title: "tailwindcomponents",
+    url: "https://tailwindcomponents.com/",
+    description: "Tailwind CSS Components - 600+ Free Examples and Templates",
+  },
+];
+---
+
+<Layout title="Recursos de tailwind">
+  <Arrow />
+  <main class="z-10 h-full relative flex-col gap-14 flex top-16">
+    <h1
+      class="bg-gradient-to-b from-slate-50 to-zinc-700 bg-clip-text text-transparent text-center text-9xl font-bold"
+    >
+      TAILWIND CSS
+    </h1>
+    <section class="z-10 text-white text-center w-full">
+      <ul class="flex gap-y-4 flex-col">
+        {
+          Links.map((data) => (
+            <li>
+              <Card
+                title={data.title}
+                href={data.url}
+                description={data.description}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    height: 100vh;
+  }
+</style>

@@ -1,0 +1,223 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Arrow from "../components/Arrow.astro";
+
+const Links = [
+  {
+    title: "alvarotrigo",
+    url: "https://alvarotrigo.com/shadow-gradients",
+    description: "CSS Shadow Gradients — Generator [Fast & Easy]",
+  },
+  {
+    title: "glass",
+    url: "https://css.glass",
+    description: "glassmorphism-generator",
+  },
+  {
+    title: "css-gradient",
+    url: "https://www.css-gradient.com/",
+    description: "Make and generate beautiful gradients",
+  },
+  {
+    title: "tintmint",
+    url: "https://tintmint.net/",
+    description:
+      "AI Color Palette Generator - Browse, Edit, Visualize and Generate Unique Palettes",
+  },
+  {
+    title: "WebGradients",
+    url: "https://webgradients.com/",
+    description: "Fresh Background Gradients",
+  },
+  {
+    title: "Shots",
+    url: "https://shots.so/",
+    description: "Create Amazing Mockups",
+  },
+  {
+    title: "OddContrast",
+    url: "https://www.oddcontrast.com",
+    description:
+      "Color contrast checker with Oklch, Oklab, Display P3, and more>",
+  },
+  {
+    title: "Huemint",
+    url: "https://huemint.com/",
+    description: "AI color palette generator",
+  },
+  {
+    title: "CSS gradient text",
+    url: "https://www.cssgradienttext.com/",
+    description: "free online gradient text generator",
+  },
+  {
+    title: "CSS Loaders",
+    url: "https://css-loaders.com/",
+    description: "A collection of more than 500 loading animations",
+  },
+  {
+    title: "AnimatiSS",
+    url: "https://xsgames.co/animatiss/",
+    description:
+      "A nice, colorful collection of CSS animations for your projects",
+  },
+  {
+    title: "CSS Reference",
+    url: "https://cssreference.io/property/align-self/",
+    description: "Learn how align-self works in CSS",
+  },
+  {
+    title: "Omatsuri",
+    url: "https://omatsuri.app/",
+    description:
+      "Progressive Web Application with 12 open source frontend focused tools",
+  },
+  {
+    title: "projects",
+    url: "https://projects.verou.me/animatable/",
+    description: "Animatable: One property, two values, endless possibilities",
+  },
+  {
+    title: "Colour Palette Generator",
+    url: "https://www.colourpalettegenerator.com/",
+    description: "Super Fast Color Palette Generator",
+  },
+  {
+    title: "boxshadows",
+    url: "https://boxshadows.xyz/",
+    description: "CSS Box Shadows Generator",
+  },
+  {
+    title: "layout",
+    url: "https://layout.bradwoods.io/customize",
+    description: "CSS Layout Generator",
+  },
+  {
+    title: "ColPat",
+    url: "https://colpat.itsvg.in/dashboard",
+    description: "Color Palette & Design Tool",
+  },
+  {
+    title: "hue.tools",
+    url: "https://hue.tools/?format=hex",
+    description: "<A free color mixer, blender, info and modifier tool.>",
+  },
+  {
+    title: "Randoma11y",
+    url: "https://randoma11y.com/",
+    description: "Accessible color combinations",
+  },
+  {
+    title: "pattern css",
+    url: "https://bansal.io/pattern-css#introduction",
+    description: "Background Patterns in CSS",
+  },
+
+  {
+    title: "Animista",
+    url: "https://animista.net/",
+    description: "On-Demand CSS Animations Library",
+  },
+
+  {
+    title: "AutoAnimate",
+    url: "https://auto-animate.formkit.com/",
+    description: "Add motion to your apps with a single line of code",
+  },
+  {
+    title: "softr",
+    url: "https://www.softr.io/tools/svg-shape-generator",
+    description: "SVG Shape Generator - Create SVG shapes for your designs",
+  },
+  {
+    title: "Framer",
+    url: "https://www.framer.com/motion/animation/",
+    description: "Animation | Framer for Developers",
+  },
+  {
+    title: "Buttons",
+    url: "https://www.buttons.cool/",
+    description: "The coolest buttons in town",
+  },
+
+  {
+    title: "wweb",
+    url: "https://wweb.dev/resources/css-separator-generator",
+    description: "CSS Section Separator Generator",
+  },
+  {
+    title: "venngage",
+    url: "https://venngage.com/tools/accessible-color-palette-generator",
+    description: "Accessible Color Palette Generator",
+  },
+  {
+    title: "heropatterns",
+    url: "https://heropatterns.com/",
+    description:
+      "Hero Patterns | Free repeatable SVG background patterns for your web projects",
+  },
+  {
+    title: "MagicPattern",
+    url: "https://www.magicpattern.design/tools/css-backgrounds",
+    description: "CSS Background Patterns",
+  },
+  {
+    title: "cubic-bezier",
+    url: "https://cubic-bezier.com/#.17,.67,.83,.67",
+    description: "Design cubic-bezier Css",
+  },
+  {
+    title: "dndkit",
+    url: "https://dndkit.com/",
+    description: "A modern drag and drop toolkit for React",
+  },
+  {
+    title: "bg.ibelick",
+    url: "https://bg.ibelick.com/",
+    description: "Ready-to-use background snippets for web developers",
+  },
+  {
+    title: "Hero Patterns",
+
+    url: "https://heropatterns.com/",
+    description:
+      "Free repeatable SVG background patterns for your web projects",
+  },
+];
+---
+
+<Layout title="Recursos de Css">
+  <Arrow />
+  <main class="z-10 h-full relative flex-col gap-14 flex top-16">
+    <h1
+      class="bg-gradient-to-b from-slate-50 to-zinc-700 bg-clip-text text-transparent text-center text-9xl font-bold"
+    >
+      CSS
+    </h1>
+    <section class="z-10 text-white text-center w-full">
+      <ul class="flex gap-y-4 flex-col">
+        {
+          Links.map((data) => (
+            <li>
+              <Card
+                title={data.title}
+                href={data.url}
+                description={data.description}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    height: 100vh;
+  }
+</style>

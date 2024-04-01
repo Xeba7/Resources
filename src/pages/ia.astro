@@ -1,0 +1,129 @@
+---
+import Arrow from "../components/Arrow.astro";
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+
+const Links = [
+  {
+    title: "codewhisperer",
+    url: "https://aws.amazon.com/es/codewhisperer/",
+    description: "Generador de código de IA - Amazon CodeWhisperer - AWS",
+  },
+  {
+    title: "Blockade Labs Skybox",
+    url: "https://skybox.blockadelabs.com/",
+    description: "AI-Generated 3D Worlds",
+  },
+  {
+    title: "KREA",
+    url: "https://www.krea.ai/",
+    description: "AI Creative Tool - image generations and prompts",
+  },
+
+  {
+    title: "Lexica",
+    url: "https://lexica.art/",
+    description: "The state of the art AI image generation engine",
+  },
+  {
+    title: "SOUNDRAW",
+    url: "https://soundraw.io/",
+    description: "AI Music Generator",
+  },
+  {
+    title: "Suno AI",
+    url: "https://www.suno.ai/",
+    description: "We are building a future where anyone can make great music",
+  },
+  {
+    title: "Replicate",
+    url: "https://replicate.com/",
+    description: "Run and fine-tune open-source models",
+  },
+  {
+    title: "InstantID",
+    url: "https://huggingface.co/spaces/InstantX/InstantID",
+    description: "A Hugging Face Space by InstantX",
+  },
+  {
+    title: "SVGio",
+    url: "https://svg.io",
+    description: "AI text prompt to SVG ",
+  },
+  {
+    title: "Runway",
+    url: "https://runwayml.com/ai-tools/gen-2/",
+    description:
+      "Create videos in any style you can imagine with Text to Video generation",
+  },
+  {
+    title: "PlaygroundAI",
+    url: "https://playground.com/",
+    description: "free-to-use online AI image creator",
+  },
+  {
+    title: "Clipdrop - Stable Diffusion",
+    url: "https://clipdrop.co/stable-diffusion",
+    description: "A Leap Forward in AI Image Generation",
+  },
+  {
+    title: "Aituts",
+    url: "https://aituts.com/sdxl/",
+    description: "How to run SDXL v1.0 with AUTOMATIC1111",
+  },
+
+  {
+    title: "OpenArt",
+    url: "https://openart.ai/discovery",
+    description:
+      "AI image generator that elevates and realizes your creative vision",
+  },
+  {
+    title: "ChatGPT",
+    url: "https://chat.openai.com/",
+    description:
+      "A conversational AI system that listens, learns, and challenges",
+  },
+  {
+    title: "Gemini",
+    url: "https://gemini.google.com/app",
+    description:
+      "Gemini is our most capable and general model, built to be multimodal and optimized for three different sizes",
+  },
+];
+---
+
+<Layout title="Recursos de tailwind">
+  <Arrow />
+  <main class="z-10 h-full relative flex-col gap-14 flex top-16">
+    <h1
+      class="bg-gradient-to-b from-slate-50 to-zinc-700 bg-clip-text text-transparent text-center text-9xl font-bold uppercase"
+    >
+      Ia
+    </h1>
+    <section class="z-10 text-white text-center w-full">
+      <ul class="flex gap-y-4 flex-col">
+        {
+          Links.map((data) => (
+            <li>
+              <Card
+                title={data.title}
+                href={data.url}
+                description={data.description}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    height: 100vh;
+  }
+</style>

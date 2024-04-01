@@ -1,0 +1,169 @@
+---
+import Arrow from "../components/Arrow.astro";
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+
+const Links = [
+  {
+    title: "iconbuddy",
+    url: "https://iconbuddy.app/",
+    description: "180K+ open source icons",
+  },
+  {
+    title: "Logggos",
+    url: "https://www.logggos.club/",
+    description: "Well-Designed Logos for Your Inspiration",
+  },
+  {
+    title: "designresourc.es",
+    url: "https://designresourc.es/",
+    description: "A curated list of the best design resources",
+  },
+  {
+    title: "colour palette generator",
+    url: "https://t.co/weJ4wiQ58l",
+    description: "Super Fast Color Palette Generator",
+  },
+  {
+    title: "toools.desigg",
+    url: "https://t.co/Exc4XtY72k",
+    description: "An archive of 1,500+ Design Resources",
+  },
+  {
+    title: "mingcute.com",
+    url: "https://www.mingcute.com/",
+    description:
+      "MingCute Icon is a set of simple and exquisite open-source icon library",
+  },
+  {
+    title: "Free Icons",
+    url: "https://free-icons.github.io/free-icons/",
+    description: "Free Icons is a collection of over 23,000",
+  },
+  {
+    title: "Yesicon",
+    url: "https://yesicon.app/",
+    description: "169 Open-Source, Free Icon sets",
+  },
+  {
+    title: "animatedicons",
+    url: "https://animatedicons.co/",
+    description: "1100+ High-quality Animated Icons",
+  },
+
+  {
+    title: "Haikei",
+    url: "https://app.haikei.app/",
+    description:
+      "A web-based design tool to generate unique SVG design assets for websites",
+  },
+  {
+    title: "svgbackgrounds",
+    url: "https://www.svgbackgrounds.com/",
+    description: "Customize and apply backgrounds fast | SVG Backgrounds",
+  },
+  {
+    title: "Simple Icons",
+    url: "https://simpleicons.org/",
+    description: "3102 Free SVG icons for popular brands",
+  },
+  {
+    title: "SVG Doodles",
+    url: "https://svgdoodles.com/",
+    description:
+      "A free collection of 50 different hand-made and editable SVG Doodles",
+  },
+  {
+    title: "tabler-icons",
+    url: "https://tabler-icons.io/",
+    description: "Tabler Icons: over 4800 vector icons for web design",
+  },
+  {
+    title: "svgrepo",
+    url: "https://www.svgrepo.com/",
+    description: "SVG Repo - Free SVG Vectors and Icons",
+  },
+  {
+    title: "fffuel",
+    url: "https://fffuel.co/",
+    description: "Free SVG generators, color tools & web design tools",
+  },
+  {
+    title: "Toools.design",
+    url: "https://www.toools.design/",
+    description: "An archive of 1000+ Design Resources",
+  },
+  {
+    title: "UI Ball",
+    url: "https://uiball.com/ldrs/",
+    description: "Free, opensource loading animations",
+  },
+  {
+    title: "Svgwave",
+    url: "https://svgwave.in",
+    description: "Svg Wave - A free & beautiful gradient SVG wave Generator",
+  },
+  {
+    title: "Iconoir",
+    url: "https://iconoir.com/",
+    description: "Free Icons",
+  },
+  {
+    title: "Lucide",
+    url: "https://lucide.dev/icons/",
+    description:
+      "Beautiful &amp; consistent icon toolkit made by the community",
+  },
+  {
+    title: "SVGL",
+    url: "https://svgl.vercel.app/",
+    description: "A beautiful library with SVG logos - Svgl",
+  },
+  {
+    title: "Freepik",
+    url: "https://www.freepik.com/",
+    description: "Create great designs, faster",
+  },
+  {
+    title: "React Icons",
+    url: "https://react-icons.github.io/react-icons/",
+    description:
+      "Include popular icons in your React projects easly with react-icons",
+  },
+];
+---
+
+<Layout title="Recursos de tailwind">
+  <Arrow />
+  <main class="z-10 h-full relative flex-col gap-14 flex top-16">
+    <h1
+      class="bg-gradient-to-b from-slate-50 to-zinc-700 bg-clip-text text-transparent text-center text-9xl font-bold"
+    >
+      SVG-ICONS
+    </h1>
+    <section class="z-10 text-white text-center w-full">
+      <ul class="flex gap-y-4 flex-col">
+        {
+          Links.map((data) => (
+            <li>
+              <Card
+                title={data.title}
+                href={data.url}
+                description={data.description}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    height: 100vh;
+  }
+</style>

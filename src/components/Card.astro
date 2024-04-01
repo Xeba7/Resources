@@ -1,0 +1,62 @@
+---
+interface card {
+  href: string;
+  title: string;
+  description?: string;
+}
+const { href, title, description }: card = Astro.props as card;
+---
+
+<div
+  class="flex gap-7 justify-between h-full w-full p-2 rounded-2xl bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)]"
+  id="card"
+>
+  <h2
+    class="text-2xl font-bold text-gray-200 h-auto flex justify-center items-center w-auto uppercase"
+  >
+    {title}
+  </h2>
+  <p class="text-xl font-medium text-gray-400 w-full text-center :">
+    {description}
+  </p><a href={href} target="_blank" rel="noreferrer"
+    ><div class="flex justify-center items-center w-auto h-full">
+      <svg
+        width="28px"
+        height="28px"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        color="#ffffff"
+        data-darkreader-inline-color=""
+        style="--darkreader-inline-color: #e8e6e3;"
+        ><path
+          d="M9.17137 14.8284L14.8282 9.17152M14.8282 9.17152H9.87848M14.8282 9.17152V14.1213"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          data-darkreader-inline-stroke=""
+          style="--darkreader-inline-stroke: #ffffff;"></path><path
+          d="M21 3.6V20.4C21 20.7314 20.7314 21 20.4 21H3.6C3.26863 21 3 20.7314 3 20.4V3.6C3 3.26863 3.26863 3 3.6 3H20.4C20.7314 3 21 3.26863 21 3.6Z"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          data-darkreader-inline-stroke=""
+          style="--darkreader-inline-stroke: #ffffff;"></path></svg
+      >
+    </div><!--?xml version="1.0" encoding="UTF-8"?-->
+  </a>
+</div>
+
+<style>
+  #card {
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid rgb(65, 65, 65);
+    box-shadow:
+      0px 0px 2px rgb(185, 185, 185),
+      0px 0px 10px rgb(139, 139, 139);
+  }
+</style>
