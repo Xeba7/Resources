@@ -1,0 +1,43 @@
+---
+
+---
+
+<a
+  href="#inicio"
+  id="scrollButton"
+  class="fixed z-20 opacity-0 cursor-pointer text-white bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] rounded-full bottom-4 right-[46%] p-4 lg:right-12 lg:bottom-32 border-[1px] border-gray-300 hover:bg-white h-16 w-16 flex justify-center items-center ml-2"
+  ><svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M12 5l0 14"></path><path d="M18 11l-6 -6"></path><path d="M6 11l6 -6"
+    ></path></svg
+  ></a
+>
+<script>
+  // Seleccionar el botón de scroll
+  const scrollButton = document.getElementById("scrollButton");
+
+  // Función para controlar la opacidad del botón según el desplazamiento
+  function handleScroll() {
+    // Obtener la posición actual de desplazamiento vertical de la página
+    const scrollPosition = window.scrollY || window.pageYOffset;
+
+    // Definir la opacidad deseada del botón
+    const opacity = scrollPosition > 200 ? 1 : 0;
+
+    // Aplicar la opacidad al botón
+    scrollButton.style.opacity = opacity;
+  }
+
+  // Escuchar el evento de desplazamiento y llamar a la función para controlar la opacidad
+  window.addEventListener("scroll", handleScroll);
+</script>

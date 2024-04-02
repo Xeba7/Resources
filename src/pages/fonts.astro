@@ -3,67 +3,71 @@ import Arrow from "../components/Arrow.astro";
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 
-const data = [
+const Links = [
   {
-    name: "fontjoy",
+    title: "fontjoy",
     description: "Fontjoy - Generate font pairings in one click",
     url: "https://fontjoy.com/",
   },
   {
-    name: "Fluid Type Scale",
+    title: "Fluid Type Scale",
     description: "Fluid Type Scale - Generate responsive font-size variables",
     url: "https://www.fluid-type-scale.com/",
   },
   {
-    name: "typedetail",
+    title: "typedetail",
     description: "Font Playground -- Play with variable fonts!",
     url: "https://play.typedetail.com/",
   },
   {
-    name: "Free Faces",
+    title: "Free Faces",
     description:
       "This website is a curated collection of typefaces that are available under a variety of free licences somewhere on the interwebs",
     url: "https://www.freefaces.gallery/",
   },
   {
-    name: "colorsnadfonts",
+    title: "colorsnadfonts",
     description: "Colors & Fonts",
     url: "https://www.colorsandfonts.com/",
   },
   {
-    name: "typetrials.com",
+    title: "typetrials.com",
     description: "TypeTrials𛲅 Powered by Pangram Pangram Foundry",
     url: "https://typetrials.com/",
   },
 
   {
-    name: "Fontshare",
+    title: "Fontshare",
     description: "Quality Fonts. Free",
     url: "https://www.fontshare.com/",
   },
   {
-    name: "v-fonts",
+    title: "v-fonts",
     description: " A simple resource for finding and trying variable fonts",
     url: "https://v-fonts.com/",
   },
 ];
 ---
 
-<Layout title="Recursos de Fonts">
+<Layout title="Resources  tailwind css">
   <Arrow />
-  <main class="z-10 h-full relative flex-col gap-14 flex top-16">
+
+  <main
+    class="z-10 h-full flex-col gap-[80px] flex top-16 lg:w-[800px] m-auto xl:w-[1100px]"
+  >
     <h1
-      class="bg-gradient-to-b from-slate-50 to-zinc-700 bg-clip-text text-transparent text-center text-9xl font-bold"
+      id="inicio"
+      class="bg-gradient-to-b from-slate-50 to-zinc-700 uppercase bg-clip-text text-transparent text-center text-3xl sm:text-6xl lg:text-8xl font-bold w-full h-auto mt-40"
     >
-      FONTS
+      Fonts
     </h1>
-    <section class="z-10 text-white text-center w-full">
+    <section class="z-10 text-white text-center p-4 w-full h-full m-auto">
       <ul class="flex gap-y-4 flex-col">
         {
-          data.map((data) => (
+          Links.map((data) => (
             <li>
               <Card
-                title={data.name}
+                title={data.title}
                 href={data.url}
                 description={data.description}
               />
@@ -74,12 +78,3 @@ const data = [
     </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    height: 100vh;
-  }
-</style>

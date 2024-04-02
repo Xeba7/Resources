@@ -133,15 +133,19 @@ const Links = [
 ];
 ---
 
-<Layout title="Recursos de tailwind">
+<Layout title="Resources  tailwind css">
   <Arrow />
-  <main class="z-10 h-full relative flex-col gap-14 flex top-16">
+
+  <main
+    class="z-10 h-full flex-col gap-[80px] flex top-16 lg:w-[800px] m-auto xl:w-[1100px]"
+  >
     <h1
-      class="bg-gradient-to-b from-slate-50 to-zinc-700 bg-clip-text text-transparent text-center text-9xl font-bold"
+      id="inicio"
+      class="bg-gradient-to-b from-slate-50 to-zinc-700 uppercase bg-clip-text text-transparent text-center text-3xl sm:text-6xl lg:text-8xl font-bold w-full h-auto mt-40"
     >
-      SVG-ICONS
+      svg&icons
     </h1>
-    <section class="z-10 text-white text-center w-full">
+    <section class="z-10 text-white text-center p-4 w-full h-full m-auto">
       <ul class="flex gap-y-4 flex-col">
         {
           Links.map((data) => (
@@ -158,12 +162,3 @@ const Links = [
     </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    height: 100vh;
-  }
-</style>

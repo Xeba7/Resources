@@ -12,10 +12,10 @@ const Links = [
   {
     title: "glass",
     url: "https://css.glass",
-    description: "glassmorphism-generator",
+    description: "Glassmorphism-generator",
   },
   {
-    title: "css-gradient",
+    title: "css gradient",
     url: "https://www.css-gradient.com/",
     description: "Make and generate beautiful gradients",
   },
@@ -49,7 +49,7 @@ const Links = [
   {
     title: "CSS gradient text",
     url: "https://www.cssgradienttext.com/",
-    description: "free online gradient text generator",
+    description: "Free online gradient text generator",
   },
   {
     title: "CSS Loaders",
@@ -101,7 +101,7 @@ const Links = [
   {
     title: "hue.tools",
     url: "https://hue.tools/?format=hex",
-    description: "<A free color mixer, blender, info and modifier tool.>",
+    description: "A free color mixer, blender, info and modifier tool",
   },
   {
     title: "Randoma11y",
@@ -187,15 +187,19 @@ const Links = [
 ];
 ---
 
-<Layout title="Recursos de Css">
+<Layout title="Resources  tailwind css">
   <Arrow />
-  <main class="z-10 h-full relative flex-col gap-14 flex top-16">
+
+  <main
+    class="z-10 h-full flex-col gap-[80px] flex top-16 lg:w-[800px] m-auto xl:w-[1100px]"
+  >
     <h1
-      class="bg-gradient-to-b from-slate-50 to-zinc-700 bg-clip-text text-transparent text-center text-9xl font-bold"
+      id="inicio"
+      class="bg-gradient-to-b from-slate-50 to-zinc-700 uppercase bg-clip-text text-transparent text-center text-3xl sm:text-6xl lg:text-8xl font-bold w-full h-auto mt-40"
     >
-      CSS
+      css
     </h1>
-    <section class="z-10 text-white text-center w-full">
+    <section class="z-10 text-white text-center p-4 w-full h-full m-auto">
       <ul class="flex gap-y-4 flex-col">
         {
           Links.map((data) => (
@@ -212,12 +216,3 @@ const Links = [
     </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    height: 100vh;
-  }
-</style>

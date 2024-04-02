@@ -8,15 +8,15 @@ const { href, title, description }: card = Astro.props as card;
 ---
 
 <div
-  class="flex gap-7 justify-between h-full w-full p-2 rounded-2xl bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)]"
+  class="flex gap-4 justify-between h-full w-full m-auto p-2 rounded-2xl bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)]"
   id="card"
 >
   <h2
-    class="text-2xl font-bold text-gray-200 h-auto flex justify-center items-center w-auto uppercase"
+    class="sm:text-2xl text-sm font-bold text-gray-200 h-auto flex justify-center items-center w-full uppercase"
   >
     {title}
   </h2>
-  <p class="text-xl font-medium text-gray-400 w-full text-center :">
+  <p class="sm:text-xl text-xs font-medium text-gray-400 w-full text-center :">
     {description}
   </p><a href={href} target="_blank" rel="noreferrer"
     ><div class="flex justify-center items-center w-auto h-full">
@@ -52,7 +52,6 @@ const { href, title, description }: card = Astro.props as card;
 
 <style>
   #card {
-    position: relative;
     border-radius: 8px;
     border: 1px solid rgb(65, 65, 65);
     box-shadow:

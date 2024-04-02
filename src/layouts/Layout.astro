@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Sidebar from "../components/Sidebar.astro";
+import Uparrow from "../components/Uparrow.astro";
 
 interface Props {
   title: string;
@@ -19,25 +20,32 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <div
-    class="absolute hidden lg:block inset-0 h-full w-full -z-10 bg-black bg-[radial-gradient(#141414_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]"
-  >
-  </div>
-  <slot />
-  <Sidebar />
-  <Footer />
+  <body class="flex flex-col relative w-full m-auto">
+    <div
+      class="absolute hidden lg:block inset-0 h-full w-full -z-10 bg-black bg-[radial-gradient(#141414_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]"
+    >
+    </div>
+    <slot />
+    <Sidebar />
+    <Footer />
+    <Uparrow />
+  </body>
+
   <style is:global>
     html {
       font-family: system-ui, sans-serif;
-      height: 100vh;
+      height: 100%;
       box-sizing: border-box;
-      width: auto;
+      width: 100%;
       max-width: 100%;
       background-color: black;
       overflow-x: hidden;
     }
+
     * {
       box-sizing: inherit;
+      margin: 0;
+      padding: 0;
     }
     code {
       font-family:
@@ -51,6 +59,4 @@ const { title } = Astro.props;
         monospace;
     }
   </style>
-
-
 </html>
