@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Button.astro";
+import Banner from "../components/Banner.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main
     class="z-10 flex items-center justify-center flex-col h-auto sm:w-[500px] p-1 m-auto w-[300px] lg:w-[800px]"
   >
+    <Banner />
     <div class="h-full flex items-center justify-center flex-col gap-5">
       <h1
         class="bg-gradient-to-b from-slate-50 to-zinc-700 bg-clip-text text-transparent text-center text-3xl sm:text-6xl lg:text-8xl font-bold uppercase"
